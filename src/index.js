@@ -12,8 +12,7 @@ let first = {
    "10":"ten",
  };
  let three = {
-   
- };
+ }
 module.exports = function toReadable (number) {
   let second = {
    "0":"",
@@ -35,8 +34,7 @@ module.exports = function toReadable (number) {
   let result = `${massive[0]} hundred ${second[nStr[1]]} ${massive[1]}`;
    if (nStr[1] !== "1") {
    return (result.trim()).replaceAll('  ', ' ');
-   }
-   if (nStr[1] === "1") {result = `${massive[0]} hundred ${second[nStr[1]]} ${massive[1]}`;}
+   } else {result = `${second[nStr[1]]} ${massive[0]}`; return (result.trim()).replaceAll('  ', ' ');}
 }
 function foo (n) {
    return(first[n])
